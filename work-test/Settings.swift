@@ -14,8 +14,7 @@ class Settings: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlow
     let blackView = UIView()
     let cellId = "cellId"
     let cellHeight: CGFloat = 50
-    
-    var featuredController: FeaturedViewController?
+
     
    
     
@@ -26,13 +25,7 @@ class Settings: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlow
         return collection
     }()
     
-    override init() {
-        super.init()
-      
-        collectionView.delegate = self
-        collectionView.register(SettingsCell.self, forCellWithReuseIdentifier: cellId)
-        
-    }
+  
     
     
     func showSettings() {
@@ -85,13 +78,7 @@ class Settings: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlow
         dismissMenu()
     }
     
-    //Mark: Down Swipe
-    
-//    func addDownSwipe() {
-//        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(self.handleDownSwipe(sender:)))
-//        swipe.direction = .down
-//        collectionView.addGestureRecognizer(swipe)
-//    }
+
     
     func handleDownSwipe(sender: UISwipeGestureRecognizer) {
         dismissMenu()
@@ -109,19 +96,7 @@ class Settings: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlow
     
     //Mark: Collection View
     
-  
-    
 
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: cellHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    
     
    
     }

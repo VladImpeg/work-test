@@ -11,7 +11,7 @@
 	<key>App Transport Security Settings</key>
 	<dict>
 		<key>Allow Arbitrary Loads</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME)  uses this to add photo</string>

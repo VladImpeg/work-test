@@ -16,22 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        let layout = UICollectionViewFlowLayout()
-        
-        window?.rootViewController = UINavigationController(rootViewController: FeaturedViewController(collectionViewLayout: layout))
-        
-      
-        
-        let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 26, green: 110, blue: 230, alpha: 0.9)
-        
-        window?.addSubview(statusBarBackgroundView)
-        window?.addConstraintsWithFormat(visualFormat: "H:|[v0]|", views: statusBarBackgroundView)
-        window?.addConstraintsWithFormat(visualFormat: "V:|[v0(20)]", views: statusBarBackgroundView)
+   
         
         return true
     }

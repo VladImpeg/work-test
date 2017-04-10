@@ -9,11 +9,15 @@
 import UIKit
 
 class Video {
-    var thumbnailImageName: String = ""
-    var title: String = ""
-    var numberOfLikes: Int = 0
-    var videoURL: String = ""
-    var duration: Double = 0
+    var countLikes: String?
+    var title: String?
+    var urlForPlayVideo: String?
+    var urlForPicture: String?
     
-    var user: User = User()
+    init(count: String, title: String, urlForVideo: String, urlForPicture: String ) {
+        self.countLikes = count
+        self.title = title
+        self.urlForPlayVideo = urlForVideo
+        self.urlForPicture = urlForPicture
+    }
 }

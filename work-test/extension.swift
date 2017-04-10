@@ -7,48 +7,27 @@
 //
 
 import UIKit
+import Foundation
 
-extension UIView {
-    
-    func addConstraintsWithFormat(visualFormat: String, views: UIView...) {
-        
-        var viewsDictionary = [String: UIView]()
-        
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            viewsDictionary[key] = view
-            view.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: visualFormat, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+class ExtenstionTableView {
+    func setup(_ tableView: UITableView, nibName: String, identifier: String) {
+        tableView.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: identifier)
     }
-    
-    func handleSwipe(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == .down || sender.direction == .up {
-            UIView.animate(withDuration: 0.3, animations: {
-                if sender.direction == .down {
-                    self.center.y += self.frame.size.height
-                } else {
-                    self.center.y -= self.frame.size.height
-                }
-                
-                
-            }, completion: { (done) in
-                self.removeFromSuperview()
-            })
-        }
-    }
-    
-    
-       
-    
-    
 }
 
-
-
-extension UIColor {
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor{
-        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
+class CustomRefreshController {
+    
+    private var refreshControl: UIRefreshControl!
+    
+    func settingRefreshController(_ tableView: UITableView) -> UIRefreshControl {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        tableView.addSubview(refreshControl)
+        tableView.tableFooterView?.isHidden = true
+        return refreshControl
+    }
+    
+    func stopRefresh() {
+        refreshControl.endRefreshing()
     }
 }
