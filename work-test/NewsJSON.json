@@ -1,0 +1,98 @@
+{
+"feed" : {
+"title": "Code Hangout with Duc - DucTran.io",
+"link": "http://www.ductran.io/blog/",
+"author": "Duc Tran"
+},
+"episodes" : [
+{
+"title": "63 - 65: Search APIs in iOS",
+"link": "https://vid.me/new",
+"pubDate": "Mon, 28 Mar 2016",
+"author": "Duc Tran",
+"description": "Have you wanted to make more people discover your apps? How about your users can access the app's content any where in iPhone, via Spotlight? These episodes give you the answer to them!",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56f965a827d4bdeb602705cf/1459185497225/1500w/searchapi_thumbnail.png"
+},
+
+{
+"title": "57-61: Introduction to 3D Touch",
+"link": "https://vid.me/new",
+"pubDate": "Mon, 28 Mar 2016",
+"author": "Duc Tran",
+"description": "3D touch is the future of multi-touch! It adds a whole new experience and layer of interaction to your app. In this episode, we are going to learn how to use Peek in 3D touch to display a preview for our app. ",
+"thumbnailURL": "https://i.ytimg.com/vi/L9cZrAbxN1E/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=qggppnaSfSWxg2cVjS14cha6vv0"
+},
+
+{
+"title": "57 - Build News Reader with UICollectionView and WebView",
+"link": "https://vid.me/new",
+"pubDate": "Mon, 28 Mar 2016",
+"author": "Duc Tran",
+"description" : "Learn everything you need to know about UICollectionView in iOS and WebView. Build a news reader app with them in iOS and Swift",
+"thumbnailURL": "https://i.ytimg.com/vi/8Pa9x9fZBtY/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=bgYbiA8R8_4QkWcy1iOYVWeuYkM"
+},
+
+{
+"title": "56 - Use Camera to Take Photo &amp; Video in iOS",
+"link": "https://vid.me/new",
+"pubDate": "Thu, 17 Mar 2016",
+"author": "Duc Tran",
+"description": "Learn how to use the camera in iOS devices to take photo and video.",
+"thumbnailURL": "https://i.ytimg.com/vi/VFKjTQI5TVg/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=67&sigh=gJRnKM32CqLeM9cWgP1Zr7gKfP4"
+},
+
+{
+"title": "43 - 14 Days of Swift Livecast",
+"link": "https://vid.me/new",
+"pubDate": "Tue, 15 Mar 2016",
+"author": "Duc Tran",
+"description": "In this special livecast of Code Hangout #43, we talked all things about Swift from installing the tools to array. This is just part 1 of the series, if you would like to join me in part 2.",
+"thumbnailURL": "https://i.ytimg.com/vi/CpIoHPUyu8s/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=67&sigh=FPIxbyT0TiEkDjIVAbr3c9kbtFY"
+},
+
+{
+"title": "42 - How to Play Audio in iOS",
+"link": "https://vid.me/new",
+"pubDate": "Sun, 13 Mar 2016",
+"author": "Duc Tran",
+"description" : "Playing sound and audio files in your app? That's not very hard. In this episode, Duc will show you how to have this feature in your app.",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56e4c950d51cd48392dada03/1457834508792/1500w/thumbnail_42.png"
+},
+
+{
+"title": "41 - How to Play Sounds and Vibrate in iOS App",
+"link": "https://vid.me/new",
+"pubDate": "Sun, 13 Mar 2016",
+"author": "Duc Tran",
+"description" : "Playing sound and audio files in your app? That's not very hard. In this episode, Duc will show you how to have this feature in your app.",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56e4c7d0d51cd48392dad207/1457834208316/1500w/thumbnail_41.png"
+},
+
+{
+"title": "40 - Create Parallax Effect Wallpaper in iOS",
+"link": "https://vid.me/new",
+"pubDate": "Sun, 13 Mar 2016",
+"author": "Duc Tran",
+"description" : "Have you looked at the parallax effect all around iOS? It adds a sense of playfulness and depth into the system. Why don't we have this in our app too? Let's dive in.",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56e4c34945bf2119aa56a34d/1457833134216/1500w/thumbnail_40.png"
+},
+
+{
+"title": "39 - New Code Hangout Broadcast Schedule",
+"link": "https://vid.me/new",
+"pubDate": "Sat, 12 Mar 2016",
+"author": "Duc Tran",
+"description" : "In this special episode, Duc talked about how he will be broadcasting and publishing Code Hangout episodes in the future and how you can interact with him even more.",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56e455a722482e1d899df2b4/1457833910409/1500w/thumbnail_39.png"
+},
+
+{
+"title": "36 - Core Data: Create a Journal App",
+"link": "https://vid.me/new",
+"pubDate": "Sat, 12 Mar 2016",
+"author": "Duc Tran",
+"description" : "Save data permanently in your app? Are you creating a todo list, social network app with offline features? Core Data is the way to go!",
+"thumbnailURL": "http://static1.squarespace.com/static/56e43d1420c647b40ef1aef4/56e453f19f726641586a3b26/56e4544d60b5e97c53033b9f/1457822541889/1500w/thumbnail_36.png"
+}
+]
+}
