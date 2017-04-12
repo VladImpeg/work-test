@@ -15,13 +15,14 @@ class ExtenstionTableView {
     }
 }
 
+//при скроле вверх рефрешим
 class CustomRefreshController {
     
     private var refreshControl: UIRefreshControl!
     
     func settingRefreshController(_ tableView: UITableView) -> UIRefreshControl {
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh")
         tableView.addSubview(refreshControl)
         tableView.tableFooterView?.isHidden = true
         return refreshControl

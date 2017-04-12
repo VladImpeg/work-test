@@ -11,6 +11,7 @@ import SwiftyJSON
 import Alamofire
 import Foundation
 
+//инструкции 
 class RequestService {
     
     func getAllFeaturedVideo(_ stringURL: String,parameters: [String:Any], result:@escaping (_ data:Data?, _ error: Error?) -> Void ) {
@@ -28,7 +29,7 @@ class RequestService {
 
 
 
-
+//парсим Джейсона
 protocol ParserTransfer {
     func passData(_ arrayVideo: [Video])
 }

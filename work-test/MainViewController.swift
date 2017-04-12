@@ -79,7 +79,7 @@ class MainViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     }
     
     func loadData(){
-        usernameLabel.text = "\(firstName) //\(lastName)"
+        usernameLabel.text = "\(firstName)"
         print(usernameLabel.text!)
         profilePictureImageView.image = profilePhoto
         profilePictureImageView.contentMode = .scaleAspectFill

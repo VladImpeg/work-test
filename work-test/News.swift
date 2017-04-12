@@ -31,8 +31,8 @@ class News {
        let jsonData = try? Data(contentsOf: jsonFileURL)
         
         if let jsonDictionary = NetworkService.parseJSONFromData(jsonData) {
-            let newsDict = jsonDictionary["episodes"] as! [[String : Any]]
-            for newsDictionary in newsDict {
+            let newsDict = jsonDictionary["episodes"] as? [[String : Any]]
+            for newsDictionary in newsDict! {
                 let newNews = News(newsDictionary: newsDictionary)
                 news.append(newNews)
             }

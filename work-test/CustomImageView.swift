@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+//получаем превью картинок и асинхронно подгружаем
 let imageCache = NSCache<AnyObject, AnyObject>()
 
 class CustomImageView: UIImageView {

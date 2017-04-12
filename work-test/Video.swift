@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//инструкции для видео
 class Video {
     var countLikes: String?
     var title: String?

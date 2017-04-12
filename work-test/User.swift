@@ -8,6 +8,8 @@
 
 import UIKit
 
+//класс для регистрации юзера
+
 var users: [User] = []
 
 class User {

@@ -1,8 +1,8 @@
 //
-//  FeaturedControllerModel.swift
+//  NewsControllerModel.swift
 //  work-test
 //
-//  Created by Vlad Kovryzhenko on 4/10/17.
+//  Created by Vlad Kovryzhenko on 4/11/17.
 //  Copyright © 2017 Vlad Kovryzhenko. All rights reserved.
 //
 
@@ -13,19 +13,17 @@ import UIScrollView_InfiniteScroll
 import Foundation
 
 
-
-class FeatureViewModel {
-    
+class NewsModel{
     private let extensionTableView = ExtenstionTableView()
     private let requestService = RequestService()
     private let parser = Parser()
     private let refreshController = CustomRefreshController()
-    fileprivate let view: FeatureViewController?
-    
+    fileprivate let view: NewsViewController?
+
     var videos: [Video]?
     var indexPage = 0
     
-    init(view: FeatureViewController) {
+    init(view: NewsViewController) {
         self.view = view
         parser.delegate = self
     }
@@ -36,15 +34,15 @@ class FeatureViewModel {
     
     
     //загружаем 10 видео по ссылке
-    func getListFeaturedVideo(page: Int) {
+    func getListNewVideo(page: Int) {
         let parameters: [String : Any] = ["limit":10,"offset":"\(page)0"]
         
-        requestService.getAllFeaturedVideo("https://api.vid.me/videos/featured",parameters: parameters, result: {(data, error)  in
+        requestService.getAllFeaturedVideo("https://api.vid.me/videos/New",parameters: parameters, result: {(data, error)  in
             self.refreshController.stopRefresh()
             if data != nil {
                 self.parser.parsFeaturedData(data)
             } else {
-              
+                
                 self.view?.showAlertWith(error!.localizedDescription)
             }
         })
@@ -65,7 +63,7 @@ class FeatureViewModel {
     
     @objc private func refreshVideoContant() {
         self.videos?.removeAll()
-        self.getListFeaturedVideo(page: 0)
+        self.getListNewVideo(page: 0)
         self.indexPage = 0
     }
     
@@ -74,14 +72,14 @@ class FeatureViewModel {
         tableView.infiniteScrollIndicatorStyle = .gray
         tableView.addInfiniteScroll { (tableView) in
             self.indexPage += 1
-            self.getListFeaturedVideo(page: self.indexPage)
+            self.getListNewVideo(page: self.indexPage)
             tableView.finishInfiniteScroll()
         }
     }
     
 }
 
-extension FeatureViewModel: ParserTransfer {
+extension NewsModel: ParserTransfer {
     func passData(_ arrayOfVideo: [Video]) {
         self.videos = arrayOfVideo
         self.view?.reloadData()
