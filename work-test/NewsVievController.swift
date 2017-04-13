@@ -20,6 +20,7 @@ class NewsViewController: UIViewController {
     
     var viewModel: NewsModel?
     
+    //как только грузится вьюха, пытаемся получить и запихнуть в тейбл видео
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingViewModel()
