@@ -11,48 +11,23 @@ import SwiftyJSON
 import Alamofire
 import Foundation
 
-//инструкции 
-class RequestService {
-    
-    func getAllFeaturedVideo(_ stringURL: String,parameters: [String:Any], result:@escaping (_ data:Data?, _ error: Error?) -> Void ) {
-        Alamofire.request(stringURL, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: [:]).responseJSON(completionHandler: { response in
-            switch response.result {
-            case .success:
-                return result(response.data, nil)
-            case .failure(let error):
-                print(error)
-                return result(nil, error)
-            }
-        })
-    }
-}
 
 
-
-//парсим Джейсона
-protocol ParserTransfer {
-    func passData(_ arrayVideo: [Video])
-}
-
-class Parser {
-    
-    var delegate: ParserTransfer?
-    
-    var videos = [Video]()
-    
-    func parsFeaturedData(_ data: Data?) {
-        let json = JSON(data: data!)
-        let jsonVideos = json["videos"]
-        for i in 0...jsonVideos.count {
-            if jsonVideos[i]["title"].stringValue != "" {
-                let video = Video(count: jsonVideos[i]["likes_count"].stringValue,
-                                  title: jsonVideos[i]["title"].stringValue,
-                                  urlForVideo: jsonVideos[i]["complete_url"].stringValue,
-                                  urlForPicture: jsonVideos[i]["thumbnail_url"].stringValue)
-                videos.append(video)
-            }
-        }
-        videos.remove(at: videos.count - 1)
-        delegate?.passData(videos)
-    }
-}
+////инструкции
+//var postEndpoint: String = "https://jsonplaceholder.typicode.com/posts/1"
+//
+//let url = URL(string: postEndpoint)
+////else {
+////    print("ERROR with your f`kin url")
+////    return ""
+////}
+//
+// let urlRequest = NSURLRequest(url: url!)
+//
+//    let config = URLSessionConfiguration.default
+//    let session = URLSession(configuration: config)
+//
+//let task = session.dataTask(with: urlRequest) { (data: Data, urlResponse, error) in
+//    //
+//}
+//task.resume()

@@ -10,6 +10,10 @@
 	<true/>
 	<key>App Transport Security Settings</key>
 	<dict>
+		<key>NSThirdPartyExeptionAllowsInsecureHTTPLoads</key>
+		<string></string>
+		<key>Use of a secure connection</key>
+		<true/>
 		<key>Allow Arbitrary Loads</key>
 		<true/>
 	</dict>
@@ -31,6 +35,10 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) location use.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) location use.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
